@@ -74,11 +74,11 @@ function Globe() {
       />
       {/* orbiting nodes */}
       {[
-        { r: 140, dur: 18, color: "primary", delay: 0 },
-        { r: 180, dur: 26, color: "accent", delay: -8 },
-        { r: 110, dur: 14, color: "success", delay: -3 },
-        { r: 200, dur: 32, color: "warning", delay: -12 },
-        { r: 160, dur: 22, color: "primary", delay: -6 },
+        { r: 140, dur: 18, color: "var(--color-primary)", delay: 0 },
+        { r: 180, dur: 26, color: "var(--color-accent)", delay: -8 },
+        { r: 110, dur: 14, color: "var(--color-success)", delay: -3 },
+        { r: 200, dur: 32, color: "var(--color-warning)", delay: -12 },
+        { r: 160, dur: 22, color: "var(--color-primary)", delay: -6 },
       ].map((o, i) => (
         <div
           key={i}
@@ -89,8 +89,8 @@ function Globe() {
           }}
         >
           <div style={{ transform: `translateX(${o.r}px)` }}>
-            <div className={`size-3 rounded-full bg-${o.color} pulse-glow -translate-x-1/2 -translate-y-1/2`}
-              style={{ boxShadow: `0 0 20px var(--color-${o.color})` }}
+            <div className="size-3 rounded-full pulse-glow -translate-x-1/2 -translate-y-1/2"
+              style={{ background: o.color, boxShadow: `0 0 20px ${o.color}` }}
             />
           </div>
         </div>
