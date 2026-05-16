@@ -13,8 +13,8 @@ const certs = [
 
 export function CertificationsModule() {
   return (
-    <div className="h-full w-full overflow-y-auto scrollbar-hide px-6 lg:px-12 py-10">
-      <div className="max-w-6xl mx-auto">
+    <div className="w-full px-6 lg:px-12 py-12 border-t border-border/50 relative">
+      <div className="max-w-[1600px] mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-10">
           <div className="text-xs font-mono text-primary tracking-widest mb-2">// MODULE_03</div>
           <h2 className="text-3xl sm:text-5xl font-display font-bold mb-3">Achievement <span className="text-gradient">Badges</span></h2>

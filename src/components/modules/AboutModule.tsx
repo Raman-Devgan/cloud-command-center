@@ -37,8 +37,9 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 
 export function AboutModule() {
   return (
-    <div className="h-full w-full overflow-y-auto scrollbar-hide px-6 lg:px-12 py-10">
-      <div className="max-w-6xl mx-auto">
+    <div className="w-full px-6 lg:px-12 py-12 border-t border-border/50 bg-background/50 relative">
+      <div className="absolute inset-0 grid-bg opacity-[0.03]" />
+      <div className="max-w-[1600px] mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-10">
           <div className="text-xs font-mono text-primary tracking-widest mb-2">// MODULE_01</div>
           <h2 className="text-3xl sm:text-5xl font-display font-bold mb-3">About <span className="text-gradient">the Operator</span></h2>

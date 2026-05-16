@@ -82,8 +82,8 @@ export function ProjectsModule() {
   const list = filter === "all" ? projects : projects.filter((p) => p.category === filter);
 
   return (
-    <div className="h-full w-full overflow-y-auto scrollbar-hide px-6 lg:px-12 py-10">
-      <div className="max-w-7xl mx-auto">
+    <div className="w-full px-6 lg:px-12 py-12 border-t border-border/50 bg-background/30">
+      <div className="max-w-[1600px] mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
           <div className="text-xs font-mono text-primary tracking-widest mb-2">// MODULE_02</div>
           <h2 className="text-3xl sm:text-5xl font-display font-bold mb-3">Live <span className="text-gradient">Deployments</span></h2>

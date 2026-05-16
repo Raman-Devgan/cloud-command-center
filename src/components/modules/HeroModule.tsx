@@ -101,9 +101,9 @@ function Globe() {
 
 export function HeroModule({ onNavigate }: { onNavigate: (id: ModuleId) => void }) {
   return (
-    <div className="relative h-full w-full flex items-center justify-center overflow-hidden">
+    <div className="relative min-h-[calc(100vh-2.25rem)] w-full flex items-center justify-center overflow-hidden py-20">
       <div className="absolute inset-0 grid-bg opacity-30" />
-      <div className="relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-4 items-center max-w-6xl w-full px-4">
+      <div className="relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-4 items-center max-w-[1600px] w-full px-4">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}

@@ -92,6 +92,10 @@
     min-height: 100vh;
   }
 
+  @media (pointer: fine) {
+    * { cursor: none !important; }
+  }
+
   ::selection { background: var(--color-primary); color: var(--color-primary-foreground); }
 }
 
