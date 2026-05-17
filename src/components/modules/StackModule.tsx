@@ -43,9 +43,7 @@ export function StackModule() {
       <div className="absolute inset-0 scanlines opacity-5 pointer-events-none" />
       <div className="max-w-[1600px] mx-auto w-full">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          <div className="text-xs font-mono text-primary tracking-widest mb-2">// MODULE_04</div>
-          <h2 className="text-3xl sm:text-5xl font-display font-bold mb-3">Tech <span className="text-gradient">Mesh</span></h2>
-          <p className="text-muted-foreground max-w-2xl">An interconnected ecosystem of tools I deploy daily.</p>
+          <h2 className="text-3xl sm:text-5xl font-display font-bold mb-3"><span className="text-gradient">Technologies I Know</span></h2>
         </motion.div>
       </div>
       <div ref={ref} className="flex-1 relative flex items-center justify-center min-h-[600px] mt-8">

@@ -85,11 +85,7 @@ function ControlCenter() {
         </div>
       </main>
 
-      {/* Hint */}
-      <div className="hidden md:flex fixed bottom-4 right-4 z-30 glass px-3 py-2 rounded-md text-[10px] font-mono text-muted-foreground gap-3">
-        <span><kbd className="text-primary">`</kbd> terminal</span>
-        <span><kbd className="text-primary">1-6</kbd> sections</span>
-      </div>
+
 
       <TerminalOverlay open={terminal} onClose={() => setTerminal(false)} onNavigate={handleNav} />
     </div>

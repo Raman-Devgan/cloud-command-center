@@ -77,35 +77,18 @@ const categoryColors: Record<string, string> = {
 
 export function ProjectsModule() {
   const [open, setOpen] = useState<Project | null>(null);
-  const [filter, setFilter] = useState<string>("all");
-  const cats = ["all", ...Array.from(new Set(projects.map((p) => p.category)))];
-  const list = filter === "all" ? projects : projects.filter((p) => p.category === filter);
 
   return (
     <div className="w-full px-6 lg:px-12 py-12 border-t border-border/50 bg-background/30">
       <div className="max-w-[1600px] mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
-          <div className="text-xs font-mono text-primary tracking-widest mb-2">// MODULE_02</div>
-          <h2 className="text-3xl sm:text-5xl font-display font-bold mb-3">Live <span className="text-gradient">Deployments</span></h2>
-          <p className="text-muted-foreground max-w-2xl">Each card is a real cluster, pipeline, or platform shipped to production.</p>
+          <h2 className="text-3xl sm:text-5xl font-display font-bold mb-3"><span className="text-gradient">Projects</span></h2>
         </motion.div>
 
-        <div className="flex gap-2 flex-wrap mb-6">
-          {cats.map((c) => (
-            <button
-              key={c}
-              onClick={() => setFilter(c)}
-              className={`px-3 py-1.5 rounded-md text-xs font-mono uppercase tracking-wider transition ${
-                filter === c ? "bg-primary text-primary-foreground glow-cyan" : "glass text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              {c}
-            </button>
-          ))}
-        </div>
+
 
         <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {list.map((p, i) => (
+          {projects.map((p, i) => (
             <motion.button
               layout
               key={p.id}
