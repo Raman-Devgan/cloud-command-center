@@ -5,8 +5,6 @@ import { ParticleField } from "@/components/ParticleField";
 import { CursorGlow } from "@/components/CursorGlow";
 import { StatusBar } from "@/components/StatusBar";
 import { TerminalOverlay } from "@/components/TerminalOverlay";
-import { BootSequence } from "@/components/BootSequence";
-
 import { AboutModule } from "@/components/modules/AboutModule";
 import { ProjectsModule } from "@/components/modules/ProjectsModule";
 import { CertificationsModule } from "@/components/modules/CertificationsModule";
@@ -27,7 +25,6 @@ export const Route = createFileRoute("/")({
 });
 
 function ControlCenter() {
-  const [booting, setBooting] = useState(true);
   const [terminal, setTerminal] = useState(false);
 
   // keyboard: ` to toggle terminal, 1-6 for sections
@@ -56,7 +53,6 @@ function ControlCenter() {
       <ParticleField />
       <CursorGlow />
 
-      <AnimatePresence>{booting && <BootSequence onDone={() => setBooting(false)} />}</AnimatePresence>
 
       <StatusBar />
 
